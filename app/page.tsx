@@ -45,7 +45,7 @@ export default function Home() {
 
           <Link
             href="https://github.com/alainux"
-            aria-description="Lessons learned and journeys."
+            aria-description="Some open-source projects and demonstrations."
             icon={faGithub}
           >
             <span>Open source</span>
@@ -53,7 +53,7 @@ export default function Home() {
 
           <Link
             href="https://www.linkedin.com/in/alain-forte"
-            aria-description="Find items for sale"
+            aria-description="Connect directly with me on social media"
             icon={faLinkedin}
           >
             <span>Social media</span>

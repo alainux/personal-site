@@ -15,7 +15,7 @@ function sketch(p5: P5CanvasInstance<MySketchProps>) {
 
   p5.draw = () => {
     p5.fill(255);
-    p5.stroke(200);
+    p5.stroke(210);
     const x = p5.mouseX - p5.width / 2;
     const y = p5.mouseY - p5.height / 2;
     const r = Math.sqrt(x * x + y * y);
