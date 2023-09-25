@@ -1,4 +1,7 @@
-import { FontAwesomeIcon, FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from "@fortawesome/react-fontawesome";
 
 export const Link: React.FC<
   React.PropsWithChildren<
@@ -8,27 +11,24 @@ export const Link: React.FC<
   return (
     <a
       href={href}
-      className="group px-5 py-4 transition-colors"
+      className="group px-0 py-4 transition-colors w-full"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="flex flex-row gap-2 justify-start align-middle">
-        <h2 className={`mb-3 text-2xl font-semibold inline-flex items-center`}>
-          {icon && (
-            <>
-              <FontAwesomeIcon
-                icon={icon}
-                className="h-5 mr-2 opacity-30 w-auto inline-block group-hover:opacity-80 transition-opacity"
-              />
-              &nbsp;
-            </>
-          )}
-          {children}
-        </h2>
-        <span className="text-2xl transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+      <h2 className={`mb-3 text-2xl font-semibold`}>
+        {icon && (
+          <FontAwesomeIcon
+            icon={icon}
+            className="h-5 mr-2 opacity-30 inline group-hover:opacity-80 transition-opacity"
+          />
+        )}
+
+        <span>{children}</span>
+
+        <span className="transition-transform group-hover:translate-x-1 motion-reduce:transform-none whitespace-nowrap ml-2">
           -&gt;
         </span>
-      </div>
+      </h2>
       <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>{ariaDescription}</p>
     </a>
   );
