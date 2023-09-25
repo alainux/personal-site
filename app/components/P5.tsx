@@ -30,10 +30,12 @@ function sketch(p5: P5CanvasInstance<MySketchProps>) {
   };
 }
 
-export const P5: React.FC = () => {
+const P5: React.FC = () => {
   return (
     <div className="absolute top-0 left-0 w-full h-fullopacity-25 -z-10">
       <ReactP5Wrapper sketch={sketch} />
     </div>
   );
 };
+
+export default P5;

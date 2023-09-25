@@ -2,13 +2,16 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "./components/Link";
 import { Logo } from "./components/Logo";
-import { P5 } from "./components/P5";
-
+import dynamic from 'next/dynamic'
+ 
+const DynamicP5 = dynamic(() => import('./components/P5'), {
+  ssr: false,
+})
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <P5 />
+      <DynamicP5 />
       <div className="relative flex-1 flex flex-col lg:flex-row place-items-center z-[-1] gap-6 pb-12">
         <Logo
           className="relative dark:invert text-hue-2 h-6 lg:h-[53.5px] w-auto"
